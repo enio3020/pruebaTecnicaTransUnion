@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "c351b9a9-49fe-408e-be2a-34fa643068e7",
+		"name": "prueba tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13605124",
+		"_collection_link": "https://planetary-star-322657.postman.co/workspace/Gendarmeria~1dbcc1c2-ff56-45be-a609-89f88ce60899/collection/13605124-c351b9a9-49fe-408e-be2a-34fa643068e7?action=share&source=collection_link&creator=13605124"
+	},
+	"item": [
+		{
+			"name": "pokeapi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pokeapi pokemon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/23/",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						"23",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pokeapi type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/type/12/",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"type",
+						"12",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pokeapi abilities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/ability/34/",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"ability",
+						"34",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cargar al Modelo",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pokemon5*%",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "pokemon",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"offset\": 40,\r\n    \"limit\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/api/pokemon/iniciarCarga",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"pokemon",
+						"iniciarCarga"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reporte",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pokemon5*%",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "pokemon",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/api/pokemon/reporte?nameAbility=&namePokemon=&nameType=",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"pokemon",
+						"reporte"
+					],
+					"query": [
+						{
+							"key": "nameAbility",
+							"value": ""
+						},
+						{
+							"key": "namePokemon",
+							"value": ""
+						},
+						{
+							"key": "nameType",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

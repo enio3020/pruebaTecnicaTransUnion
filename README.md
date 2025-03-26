@@ -56,3 +56,23 @@ BEGIN
 END;
 
 Antes de crear este procedimiento se debe ejecutar el codigo, para que se cree el modelo. 
+
+BackEnd es SpringBoot
+
+Para su ejecucion
+
+instalar IDE spring tools 4 https://spring.io/tools
+
+Validar que el puerto 8001 este libre.
+
+Configurar la BD Oracle.
+
+Creando un Usuario.
+
+CREATE USER POKEMON IDENTIFIED BY POKEMON;
+
+GRANT ALL PRIVILEGES TO POKEMON IDENTIFIED BY POKEMON;
+
+Abrir el proyecto por el menu de "Open Projects From file System"
+
+Ejecutar por medio de Rus As -> Spring Boot App
